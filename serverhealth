@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+echo "================================================================================"
+echo "                  --  Here is the Server Health Report  --"
+echo "================================================================================"
+echo
+
+echo "Hostname: $(hostname)"
+echo
+
+echo "Current Date:"
+date
+
+echo
+echo "System Uptime:"
+uptime
+
+echo
+echo "Disc Usage: "
+df -h
+
+echo
+echo "Memory Usage: "
+free -h
+
