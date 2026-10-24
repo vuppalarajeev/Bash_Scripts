@@ -1,2 +1,2 @@
 # Bash_Scripts
-In this repo you find the bash scripts written by me for automation!
+In this repo you'll find the bash scripts written by me for automation!
