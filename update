@@ -10,7 +10,7 @@ then
     sudo apt-get update 1>>$output 2>>$error
     if [ $? -ne 0 ]
     then
-        echo "There was some error while updating, check the $error file."
+        echo "There was some error while updating, check the $error file"
     fi
 fi
 
@@ -21,6 +21,6 @@ then
     # Can also use sudo apt dist-upgrade, skipping for now.
     if [ $? -ne 0 ]
     then
-        echo "There was some error while updating, check the $error file."
+        echo "There was some error while updating, check the $error file"
     fi
 fi
