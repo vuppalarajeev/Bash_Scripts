@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+
+release=/etc/os-release
+output=/var/log/update.log
+error=/var/log/update_error.log
+
+if grep -q "Kali" $release
+then
+    # The Host is based on Kali Linux, run the following command.
+    sudo apt-get update 1>>$output 2>>$error
+    if [ $? -ne 0 ]
+    then
+        echo "There was some error while updating, check the $error file"
+    fi
+fi
+
+if grep -q "Arch" $release
+then
+    # The Host is based on Arch, run the following command.
+    sudo pacman -Syu -y 1>>$output 2>>$error
+    # Can also use sudo apt dist-upgrade, skipping for now.
+    if [ $? -ne 0 ]
+    then
+        echo "There was some error while updating, check the $error file"
+    fi
+fi
