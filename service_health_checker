@@ -1,0 +1,27 @@
+#!/usr/bin/bash
+
+state_check() {
+if [ $? -eq 0 ]
+then
+    echo "RUNNING"
+else
+    echo "STOPPED"
+fi
+}
+
+echo "===========SERVICE STATE REPORT==========="
+echo " "
+echo -n "Docker: "
+systemctl is-active docker > /dev/null 2>&1
+state_check
+
+echo -n "ssh: "
+systemctl is-active ssh > /dev/null 2>&1
+state_check
+
+echo -n "Nginx: "
+systemctl is-active nginx > /dev/null 2>&1
+state_check
+echo " "
+echo "=========================================="
+
