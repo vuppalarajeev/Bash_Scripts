@@ -12,6 +12,8 @@ fi
 echo "============SERVICE STATE REPORT============"
 echo " "
 
+# systemctl is a command used to manage and monitor services controlled by systemd.
+
 echo -n "Docker: "
 systemctl is-active docker > /dev/null 2>&1
 state_check
