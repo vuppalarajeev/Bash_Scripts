@@ -9,7 +9,7 @@ else
 fi
 }
 
-echo "===========SERVICE STATE REPORT==========="
+echo "============SERVICE STATE REPORT============"
 echo " "
 echo -n "Docker: "
 systemctl is-active docker > /dev/null 2>&1
@@ -23,5 +23,5 @@ echo -n "Nginx: "
 systemctl is-active nginx > /dev/null 2>&1
 state_check
 echo " "
-echo "=========================================="
+echo "============================================"
 
